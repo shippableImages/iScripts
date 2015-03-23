@@ -1,13 +1,14 @@
 FROM ubuntu:12.04
+MAINTAINER Stephanie Lingwood "stephanie@shippable.com"
 
-COPY os/ubuntu/12_04.sh /os/ubuntu/
+ADD os/ubuntu/12_04.sh /os/ubuntu/
 RUN /bin/bash -c "source /os/ubuntu/12_04.sh"
 
-COPY language/Node_js/pre.sh /language/Node_js/
+ADD language/Node_js/pre.sh /language/Node_js/
 RUN /bin/bash -c "source /language/Node_js/pre.sh"
 
-COPY language/Node_js/version/0_10.sh /language/Node_js/version/
-RUN /bin/bash -c "source /language/Node_js/version/0_10.sh"
+ADD language/Node_js/version/0_6.sh /language/Node_js/version/
+RUN /bin/bash -c "source /language/Node_js/version/0_6.sh"
 
-COPY language/Node_js/post.sh /language/Node_js/
+ADD language/Node_js/post.sh /language/Node_js/
 RUN /bin/bash -c "source /language/Node_js/post.sh"
