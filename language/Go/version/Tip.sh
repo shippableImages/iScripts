@@ -7,7 +7,7 @@ echo "Installing Go tip..."
 # Activate Go
 [[ -s "/root/.gvm/scripts/gvm" ]] && source "/root/.gvm/scripts/gvm"
 
-gvm use tip
+gvm use tip --default
 
 export GVM_ROOT="/root/.gvm"
 export PATH="$PATH:/root/.gvm/bin"
