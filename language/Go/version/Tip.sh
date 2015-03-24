@@ -2,10 +2,14 @@
 
 # Install Go tip
 echo "Installing Go tip..."
-sudo su - shippable -c "source /home/shippable/.gvm/scripts/gvm && gvm install tip";
+. /root/.gvm/scripts/gvm && gvm install tip;
 
 # Activate Go
-[[ -s "/home/shippable/.gvm/scripts/gvm" ]] && source "/home/shippable/.gvm/scripts/gvm"
+[[ -s "/root/.gvm/scripts/gvm" ]] && source "/root/.gvm/scripts/gvm"
+
 gvm use tip
+
+export GVM_ROOT="/root/.gvm"
+export PATH="$PATH:/root/.gvm/bin"
 
 echo "Done installing Go tip"
