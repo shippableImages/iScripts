@@ -9,6 +9,3 @@ RUN /bin/bash -c "source /language/Node_js/pre.sh"
 
 ADD language/Node_js/version/0_6.sh /language/Node_js/version/
 RUN /bin/bash -c "source /language/Node_js/version/0_6.sh"
-
-ADD language/Node_js/post.sh /language/Node_js/
-RUN /bin/bash -c "source /language/Node_js/post.sh"

@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+# TODO: Rework for CentOS
+
 locale-gen en_US en_US.UTF-8 && \
 dpkg-reconfigure locales
 
@@ -14,16 +16,9 @@ apt-get update && apt-get install -y \
   python-pip \
   python-software-properties \
   wget \
-  # are gcc and make included in build-essential?
-  # do we need apt-utils?
-# libssl1.0.0 openssl libssl-dev
-
-library dl                  : not found
-Checking for openssl                     : not found
-Checking for function SSL_library_init   : not found
-Checking for header openssl/crypto.h
 
 # Create user 'shippable' if it doesn't exist
+# TODO: Do we need this user?
 sudo id -u shippable &>/dev/null || sudo useradd -m shippable
 
 add-apt-repository ppa:git-core/ppa \

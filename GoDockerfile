@@ -1,0 +1,11 @@
+FROM ubuntu:12.04
+MAINTAINER Stephanie Lingwood "stephanie@shippable.com"
+
+ADD os/ubuntu/12_04.sh /os/ubuntu/
+RUN /bin/bash -c "source /os/ubuntu/12_04.sh"
+
+ADD language/Go/pre.sh /language/Go/
+RUN /bin/bash -c "source /language/Go/pre.sh"
+
+ADD language/Go/version/1_1.sh /language/Go/version/
+RUN /bin/bash -c "source /language/Go/version/1_1.sh"
