@@ -7,7 +7,7 @@ echo "Installing Go 1.3..."
 # Activate Go
 [[ -s "/root/.gvm/scripts/gvm" ]] && source "/root/.gvm/scripts/gvm"
 
-gvm use go1.3
+gvm use go1.3 --default
 
 export GVM_ROOT="/root/.gvm"
 export PATH="$PATH:/root/.gvm/bin"
