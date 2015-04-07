@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install virtualenv;
+# setting up ROOT shippable user
+RUN useradd -d /home/shippable -m -s /bin/bash -p shippablepwd shippable;\
+    echo 'shippable ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers;
 
 CMD ["/bin/bash"]
