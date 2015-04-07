@@ -3,7 +3,8 @@
 echo "============ install python prereqs==============";
 add-apt-repository -y ppa:fkrull/deadsnakes;
 apt-get update;
-apt-get install -y libxml2 libxslt python2.6 python2.6-dev python-pip python-dev python-virtualenv;
+apt-get install -y libxml2 libxml2-dev libxslt libxslt-dev \
+                   python2.6 python2.6-dev python-pip python-dev python-virtualenv;
 
 echo "========= Installing python packages ================"
 sudo pip install pika pyyaml paramiko coverage nose pytest tox docopt python-daemon mock;
