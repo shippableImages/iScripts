@@ -14,7 +14,7 @@ virtualenv -p python2.6 $HOME/venv/2.6
 . $HOME/venv/2.6/bin/activate
 pip install pyopenssl ndg-httpsclient pyasn1
 pip install nose mock pytest coverage
-pip install lxml==3.3.1
+pip install lxml==3.1.2
 deactivate
 
 # install python prereqs
