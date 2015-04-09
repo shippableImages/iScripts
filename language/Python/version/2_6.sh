@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Install Python 2.6
-sudo apt-get install -y python2.6 python2.6-dev pyopenssl ndg-httpsclient pyasn1
+sudo apt-get install -y python2.6 python2.6-dev 
 
 # Install virtualenv
 sudo wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O /tmp/ez_setup.py
@@ -12,6 +12,7 @@ virtualenv -p python2.6 $HOME/venv/2.6
 
 # Install pip packages
 . $HOME/venv/2.6/bin/activate
+pip install pyopenssl ndg-httpsclient pyasn1
 pip install nose mock pytest coverage
 pip install lxml==3.3.1
 deactivate
