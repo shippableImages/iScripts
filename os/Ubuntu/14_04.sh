@@ -13,6 +13,7 @@ apt-get update && apt-get install -y \
   make \
   python-pip \
   python-software-properties \
+  openssl \
   wget \
 
 # Create user 'shippable' if it doesn't exist
