@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Install Python 2.6
-sudo apt-get install -y python2.6 python2.6-dev libffi-dev libssl-dev
+sudo apt-get install -y python2.6 python2.6-dev 
 
 # Install virtualenv
 sudo wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O /tmp/ez_setup.py
