@@ -5,9 +5,9 @@ sudo apt-get install -y python python-dev libffi-dev libssl-dev
 
 # Install virtualenv
 sudo wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O /tmp/ez_setup.py
-sudo python2.7 /tmp/ez_setup.py
-sudo easy_install-2.7 pip
-pip2.7 install virtualenv
+sudo python /tmp/ez_setup.py
+sudo easy_install pip
+pip install virtualenv
 virtualenv -p python $HOME/venv/2.7
 
 # Install pip packages
