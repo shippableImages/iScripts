@@ -3,7 +3,7 @@
 # install python prereqs
 add-apt-repository -y ppa:fkrull/deadsnakes;
 apt-get update;
-apt-get install -y libxml2 libxml2-dev libxslt1.1 libxslt1-dev \ 
+apt-get install -y libxml2 libxml2-dev libxslt1.1 libxslt1-dev \
                    python2.6 python2.6-dev python-pip python-dev python-virtualenv;
 
 # Installing python packages 
