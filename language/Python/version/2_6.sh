@@ -11,7 +11,7 @@ pip install virtualenv
 virtualenv -p python2.6 $HOME/venv26
 
 # Install pip packages
-. $HOME/venv/bin/activate
+. $HOME/venv26/bin/activate
 pip install lxml nose mock pytest coverage
 deactivate
 
