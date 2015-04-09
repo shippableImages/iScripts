@@ -13,6 +13,7 @@ virtualenv -p python $HOME/venv/2.7
 # Install pip packages
 . $HOME/venv/2.7/bin/activate
 pip install pyopenssl ndg-httpsclient pyasn1
-pip install nose mock pytest coverage lxml
+pip install nose mock pytest coverage 
+pip install lxml
 deactivate
 

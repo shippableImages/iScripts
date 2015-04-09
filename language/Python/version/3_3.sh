@@ -13,6 +13,7 @@ virtualenv -p python3.3 $HOME/venv/3.3
 # Install pip packages
 . $HOME/venv/3.3/bin/activate
 pip install pyopenssl ndg-httpsclient pyasn1
-pip install nose mock pytest coverage lxml
+pip install nose mock pytest coverage 
+pip install lxml==3.3.1
 deactivate
 
