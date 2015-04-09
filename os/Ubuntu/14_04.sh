@@ -12,6 +12,7 @@ apt-get update && apt-get install -y \
   git-core \
   make \
   python-pip \
+  software-properties-common \
   python-software-properties \
   openssl \
   wget \
