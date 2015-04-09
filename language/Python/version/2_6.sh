@@ -8,11 +8,12 @@ sudo wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O /tm
 sudo python2.6 /tmp/ez_setup.py
 sudo easy_install-2.6 pip
 pip2.6 install virtualenv
-virtualenv -p python2.6 $HOME/venv26
+virtualenv -p python2.6 $HOME/venv/2.6
 
 # Install pip packages
-. $HOME/venv26/bin/activate
-pip install lxml nose mock pytest coverage
+. $HOME/venv/2.6/bin/activate
+pip install nose mock pytest coverage
+pip install lxml==3.3.1
 deactivate
 
 # install python prereqs
