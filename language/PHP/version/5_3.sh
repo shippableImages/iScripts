@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 # Get all necessary build dependencies
+apt-get update
 apt-get install -y ruby git wget libmcrypt-dev libreadline-dev
 apt-get build-dep -y php5-cli
 
