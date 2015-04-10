@@ -8,8 +8,10 @@ apt-get build-dep -y php5-cli
 # Install phpenv
 git clone git://github.com/CHH/phpenv.git $HOME/phpenv
 $HOME/phpenv/bin/phpenv-install.sh
-export PATH=$HOME/.phpenv:$PATH && echo 'export PATH=$HOME/.phpenv/bin:$PATH' >> $HOME/.bashrc
-eval "$(phpenv init -)" && echo 'eval "$(phpenv init -)"' >> $HOME/.bashrc
+export PATH=$HOME/.phpenv:$PATH 
+eval "$(phpenv init -)" 
+echo 'export PATH=$HOME/.phpenv/bin:$PATH' >> $HOME/.bashrc
+echo 'eval "$(phpenv init -)"' >> $HOME/.bashrc
 
 # Install php-build
 git clone git://github.com/php-build/php-build.git $HOME/php-build
