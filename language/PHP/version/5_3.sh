@@ -34,32 +34,28 @@ curl -s http://getcomposer.org/installer | php
 chmod +x composer.phar
 mv composer.phar /usr/local/bin/composer
 
-echo "============ Installing PHP Extension: memcache ==========="
-printf '\n' | pecl install memcache
-
-echo "======== Installing PHP extension: memcached ========"
+echo "========== Installing libmemcached =========="
 wget https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
 tar xzf libmemcached-1.0.18.tar.gz && cd libmemcached-1.0.18
 ./configure --enable-sasl
 make && make install
 cd .. && rm -fr libmemcached-1.0.18*
-printf '\n' | pecl install memcached
 
-echo "=========== Installing PHP extension: mongo ==========="
-print '\n' | pecl install mongo
-
-echo "=========== Installing PHP extension: amqp ============"
+echo "=========== Installing librabbitmq ============"
 wget https://github.com/alanxz/rabbitmq-c/releases/download/v0.5.2/rabbitmq-c-0.5.2.tar.gz
 tar xzf rabbitmq-c-0.5.2.tar.gz 
 cd rabbitmq-c-0.5.2 && mkdir build && cd build
 cmake ..
 cmake --build . --target install
+ln -s /usr/local/lib/x86_64-linux-gnu/librabbitmq.so /usr/local/lib/librabbitmq.so
+ln -s /usr/local/lib/x86_64-linux-gnu/librabbitmq.so.1 /usr/local/lib/librabbitmq.so.1
 cd ../.. && rm -rf rabbitmq-c*
-print '\n' | pecl install amqp
 
-echo "=========== Installing PHP extension: zmq ============="
+echo "=========== Installing PHP extensions =============="
 apt-get install -y libzmq-dev
+printf '\n' | pecl install memcache
+printf '\n' | pecl install memcached
+printf '\n' | pecl install mongo
+printf '\n' | pecl install amqp
 printf '\n' | pecl install zmq-beta
-
-echo "=========== Installing PHP extension: redis =============="
 printf '\n' | pecl install redis
