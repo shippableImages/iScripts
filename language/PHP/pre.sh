@@ -3,7 +3,7 @@
 echo "=========== Installing dependencies ============"
 apt-get update
 apt-get install -y git wget cmake libmcrypt-dev libreadline-dev
-apt-get build-dep -y php5-cli
+#apt-get build-dep -y php5-cli
 
 echo "========== Installing libmemcached =========="
 #wget https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
