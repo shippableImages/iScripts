@@ -1,8 +1,6 @@
 #!/bin/bash -e
 
 echo "============ Building PHP 5.3.29 =============="
-export PATH=$HOME/.phpenv/bin:$PATH 
-eval "$(phpenv init -)" 
 php-build --definitions
 phpenv
 #php-build -i development --pear 5.3.29 $HOME/.phpenv/versions/5.3.29

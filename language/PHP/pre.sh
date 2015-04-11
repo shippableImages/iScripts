@@ -25,10 +25,8 @@ echo "=========== Installing librabbitmq ============"
 echo "============ Installing phpenv ============="
 git clone git://github.com/CHH/phpenv.git $HOME/phpenv
 $HOME/phpenv/bin/phpenv-install.sh
-export PATH=$HOME/.phpenv/bin:$PATH 
-eval "$(phpenv init -)" 
-echo 'export PATH=$HOME/.phpenv/bin:$PATH' >> $HOME/.bashrc
-echo 'eval "$(phpenv init -)"' >> $HOME/.bashrc
+echo 'export PATH=$HOME/.phpenv/bin:$PATH' >> $HOME/.bash_profile
+echo 'eval "$(phpenv init -)"' >> $HOME/.bash_profile
 rm -rf $HOME/phpenv
 
 echo "============ Installing php-build =============="
