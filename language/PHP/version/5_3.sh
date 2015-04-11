@@ -1,7 +1,7 @@
-#!/bin/bash -e
+#!/bin/bash
 
 echo "============ Building PHP 5.3.29 =============="
-. $HOME/.bashrc
+source $HOME/.bashrc
 php-build --definitions
 phpenv
 #php-build -i development --pear 5.3.29 $HOME/.phpenv/versions/5.3.29
