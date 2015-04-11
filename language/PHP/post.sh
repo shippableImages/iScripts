@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+export PATH=$HOME/.phpenv/bin:$PATH
+eval "$(phpenv init -)"
+
 echo "============ Installing PHPUnit ============="
 wget https://phar.phpunit.de/phpunit.phar
 chmod +x phpunit.phar
