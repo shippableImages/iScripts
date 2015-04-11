@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
-# Get all necessary build dependencies
+echo "=========== Installing dependencies ============"
 apt-get update
-apt-get install -y ruby git wget cmake libmcrypt-dev libreadline-dev
+apt-get install -y git wget cmake libmcrypt-dev libreadline-dev
 apt-get build-dep -y php5-cli
 
 echo "============ Installing phpenv ============="

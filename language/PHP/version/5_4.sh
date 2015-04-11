@@ -1,5 +1,6 @@
 #!/bin/bash -e
 
+echo "=========== Installing dependencies ============"
 apt-get update
 apt-get install -y git wget cmake libmcrypt-dev libreadline-dev
 apt-get build-dep -y php5-cli
