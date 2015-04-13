@@ -18,7 +18,8 @@ apt-get update && apt-get install -y \
 
 # Create user 'shippable' if it doesn't exist
 # TODO: Do we need this user?
-sudo id -u shippable &>/dev/null || sudo useradd -m shippable
+sudo id -u shippable &>/dev/null || sudo useradd -m -s /bin/bash shippable
+sudo echo 'shippable  ALL=(ALL:ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 add-apt-repository ppa:git-core/ppa \
   && apt-get update \
