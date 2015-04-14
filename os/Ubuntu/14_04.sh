@@ -16,6 +16,7 @@ apt-get update && apt-get install -y \
   python-software-properties \
   openssl \
   wget \
+  unzip
 
 # Create user 'shippable' if it doesn't exist
 sudo id -u shippable &>/dev/null || sudo useradd -m -s /bin/bash shippable
