@@ -18,9 +18,10 @@ sudo tar xzf apache-maven-3.2.5-bin.tar.gz -C /usr/local && rm -f apache-maven-3
 
 # Install Gradle
 sudo wget https://services.gradle.org/distributions/gradle-2.3-all.zip
-
+unzip -qq gradle-2.3-all.zip -d /usr/local && rm -f gradle-2.3-all.zip
 
 # Update system path
 echo 'export PATH=$PATH:/usr/lib/jvm/java-6-openjdk-amd64/jre/bin' >> $HOME/.bashrc
 echo 'export PATH=$PATH:/usr/local/apache-ant-1.9.4/bin' >> $HOME/.bashrc
 echo 'export PATH=$PATH:/usr/local/apache-maven-3.2.5/bin' >> $HOME/.bashrc
+echo 'export PATH=$PATH:/usr/local/gradle-2.3/bin' >> $HOME/.bashrc
