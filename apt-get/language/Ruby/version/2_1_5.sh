@@ -6,10 +6,10 @@ curl -sSL https://get.rvm.io | bash -s stable
 echo '[[ -s /etc/profile.d/rvm.sh ]] && source /etc/profile.d/rvm.sh' >> $HOME/.bashrc
 [[ -s /etc/profile.d/rvm.sh ]] && source /etc/profile.d/rvm.sh
 
-# Install Ruby 1.9.3
+# Install Ruby 2.1.5
 rvm requirements
-rvm install 1.9.3
-rvm use 1.9.3
+rvm install 2.1.5
+rvm use 2.1.5
 
 # Install ruby gems
 gem install bundler
