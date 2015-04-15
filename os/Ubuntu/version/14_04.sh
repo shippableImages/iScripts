@@ -18,6 +18,11 @@ apt-get update && apt-get install -y \
   wget \
   unzip
 
+# Install the latest git
+sudo add-apt-repository ppa:git-core/ppa -y
+sudo apt-get update
+sudo apt-get install -y git
+
 # Create user 'shippable' if it doesn't exist
 sudo id -u shippable &>/dev/null || sudo useradd -m -s /bin/bash shippable
 sudo echo 'shippable  ALL=(ALL:ALL) NOPASSWD:ALL' >> /etc/sudoers
