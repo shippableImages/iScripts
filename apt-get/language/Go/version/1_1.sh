@@ -15,5 +15,5 @@ apt-get update && apt-get install -y \
 # Install Go 1.1
 curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | bash
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source $HOME/.gvm/scripts/gvm 
-gvm install go1.1 && gvm use go1.1 --default
+gvm install go1.1.2 && gvm use go1.1.2 --default
 echo 'GVM_ROOT=$HOME/.gvm' >> $HOME/.bashrc
