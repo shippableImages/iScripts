@@ -1,6 +1,13 @@
 #!/bin/bash -e
 
-echo "Installing Node.js 0.12..."
+# install nvm:
+curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
+
+# Set NVM_DIR so the installations go to the right place
+export NVM_DIR="/root/.nvm"
+
+# add source of nvm to .bashrc - allows user to use nvm as a command
+echo "source ~/.nvm/nvm.sh" >> .bashrc
 
 # use nvm to install node
 . /root/.nvm/nvm.sh && nvm install 0.12
@@ -13,5 +20,3 @@ npm install npm -g
 
 # Install grunt-cli
 npm install -g grunt-cli
-
-echo "Done installing Node.js 0.12"
