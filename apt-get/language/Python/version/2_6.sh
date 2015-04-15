@@ -15,12 +15,12 @@ sudo easy_install-2.6 pip
 pip2.6 install virtualenv
 virtualenv -p python2.6 $HOME/venv/2.6
 
+# Activate virtualenv on login
+echo 'source $HOME/venv/2.6/bin/activate' >> $HOME/.bashrc
+
 # Install pip packages
 . $HOME/venv/2.6/bin/activate
 pip install pyopenssl ndg-httpsclient pyasn1
 pip install nose mock pytest coverage
 CFLAGS="-O0" pip install lxml
 deactivate
-
-# Activate virtualenv on login
-echo 'source $HOME/venv/2.6/bin/activate' >> $HOME/.bashrc
