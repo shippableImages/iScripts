@@ -1,5 +1,10 @@
 #!/bin/bash -e
 
+# install python prereqs
+add-apt-repository -y ppa:fkrull/deadsnakes
+apt-get update
+apt-get install -y libxml2 libxml2-dev libxslt1.1 libxslt1-dev libffi-dev libssl-dev
+
 # Install Python 3.2
 sudo apt-get install -y python3.2 python3.2-dev 
 
@@ -16,4 +21,3 @@ pip install pyopenssl ndg-httpsclient pyasn1
 pip install nose mock pytest coverage 
 CFLAGS="-O0" pip install lxml
 deactivate
-
