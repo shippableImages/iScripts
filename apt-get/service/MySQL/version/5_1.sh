@@ -6,6 +6,7 @@ VERSION=5.1.72
 sudo apt-get install -y libncurses5-dev
 sudo groupadd mysql
 sudo useradd -g mysql mysql
+sudo chmod 1777 /tmp
 
 # Install MySQL 5.1
 sudo wget http://downloads.mysql.com/archives/get/file/mysql-$VERSION.tar.gz
