@@ -6,12 +6,13 @@ VERSION=5.5.42
 sudo apt-get install -y cmake libncurses5-dev
 sudo groupadd mysql
 sudo useradd -g mysql mysql
+sudo chmod 1777 /tmp
 
 # Install MySQL 5.5
 sudo wget http://downloads.mysql.com/archives/get/file/mysql-$VERSION.tar.gz
 sudo tar xzf mysql-$VERSION.tar.gz && sudo rm -f mysql-$VERSION.tar.gz
 cd mysql-$VERSION
-sudo cmake . 
+sudo cmake .
 sudo make && sudo make install
 
 # Postinstallation setup
